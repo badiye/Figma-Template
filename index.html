@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<!--
+top = navbar & header
+    navbar = logo, links-li-a
+    header = header-content - h1,p,p(#socials),icons-a-i
+list = list-container*4
+    list-container = img, details
+        details = topic, p, more(hidden)-p, tags, button
+            topic = h2,description - p(#client),ul-li(#role,#year)
+            tags = li(tag)
+about = aboutmyself, skill-list
+    aboutMyself = h2, p, p(#socials), icons-a-i, button
+    skill-list = skillss*3
+        skillss = title-p,i, content-ul-li-img,p
+contact = contactForm
+    contactForm = text, form
+        text = h2,p
+        form = form - input*2, textarea, button
+-->
+
+<body>
+
+    <div class="top">
+
+    <!--Navigation-->
+        <nav class="navbar">
+            <div class="logo">My Logo</div>
+            <ul class="links">
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    <!--Header-->
+        <div class="header">
+            <div class="header-content">
+                <h1>I am Mahlet. <br/> Glad to see you!</h1>
+                <p>I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+                <p id="socials">LET'S CONNECT</p>
+                <div class="icons">
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkdin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.messenger.com" target="_blank"><i class="fab fa-m"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-hand-peace"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--List Portfolio-->
+    <div class="list" id="portfolio">
+        <div class="list-container">
+            <div class="img-box">
+                <img id="one" src="tonic.png" alt="TONIC">
+            </div>
+            <div class="details">
+                <div class="topic">
+                    <h2>Tonic</h2>
+                    <div class="description">
+                        <p id="client">CANOPY</p>
+                        <ul>
+                            <li id="role">Back End Dev</li>
+                            <li id="year">2015</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
+                <div class="more">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.</p>
+                </div>
+                <ul class="tags">
+                    <li class="tag">html</li>
+                    <li class="tag">css</li>
+                    <li class="tag">javascript</li>
+                    <li class="tag" id="extra">Ruby</li>
+                    <li class="tag" id="extra">Bootstrap</li>
+                </ul>
+                <button>See Project</button>
+                <div class="actions">
+                    <button class="see"><p>See Live</p><img src="live.svg" alt=""></button>
+                    <button class="see"><p>See Source</p><img src="Icon -GitHub.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <!--multiPostStories-->
+        <div class="list-container">
+            <div class="details">
+                <div class="topic">
+                    <h2>Multi Post Stories</h2>
+                    <div class="description">
+                        <p id="client">FACEBOOK</p>
+                        <ul>
+                            <li id="role">Full Stack Dev</li>
+                            <li id="year">2015</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.</p>
+                <ul class="tags">
+                    <li class="tag">html</li>
+                    <li class="tag">Ruby on rails</li>
+                    <li class="tag">css</li>
+                    <li class="tag">javascript</li>
+                </ul>
+                <button>See Project</button>
+            </div>
+            <img src="multi-post-stories.png" alt="FACEBOOK-MULTI POST STORIES">
+        </div>
+        <!--facebook360-->
+        <div class="list-container">
+            <img src="facebook-360.png" alt="FACEBOOK-360">
+            <div class="details">
+                <div class="topic">
+                    <h2>Facebook 360</h2>
+                    <div class="description">
+                        <p id="client">FACEBOOK</p>
+                        <ul>
+                            <li id="role">Full Stack Dev</li>
+                            <li id="year">2015</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.</p>
+                <ul class="tags">
+                    <li class="tag">html</li>
+                    <li class="tag">Ruby on rails</li>
+                    <li class="tag">css</li>
+                    <li class="tag">javascript</li>
+                </ul>
+                <button>See Project</button>
+            </div>
+        </div>
+        <!--uberNavigation-->
+        <div class="list-container">
+            <div class="details">
+                <div class="topic">
+                    <h2>Uber Navigation</h2>
+                    <div class="description">
+                        <p id="client">Uber</p>
+                        <ul>
+                            <li id="role">Lead Developer</li>
+                            <li id="year">2018</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.</p>
+                <ul class="tags">
+                    <li class="tag">html</li>
+                    <li class="tag">Ruby on rails</li>
+                    <li class="tag">css</li>
+                    <li class="tag">javascript</li>
+                </ul>
+                <button>See Project</button>
+            </div>
+            <img src="uber-navigation.png" alt="Uber Navigation">
+        </div>
+    </div>
+
+    <!--About Me-->
+    <div class="about" id="about">
+        <div class="aboutMyself">
+            <h2>About Myself</h2>
+            <p>Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+            <p id="socials">LET'S CONNECT</p>
+            <div class="icons">
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkdin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.messenger.com" target="_blank"><i class="fab fa-m"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fas fa-hand-peace"></i></a>
+            </div>
+            <button>Get my resume</button>
+        </div>
+        <div class="skill-list">
+            <div class="skillss" id="lang">
+                <div class="title">
+                    <p>Languages</p>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><img src="js.png" alt="JS"><p>Javascript</p>
+                        </li>
+                        <li><img src="html.png" alt="html"><p>HTML</p>
+                        </li>
+                        <li><img src="css.jpeg" alt="css"><p>CSS</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skillss" id="fw">
+                <div class="title">
+                    <p>Frameworks</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="skillss" id="sk">
+                <div class="title">
+                    <p>Skills</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact-->
+    <div class="contact" id="contact">
+        <div class="contactForm">
+            <div class="text">
+                <h2>Contact me</h2>
+                <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it!</p>
+            </div>
+            <div class="form">
+                <form>
+                    <input type="text" id="name" placeholder="lorem ipsum">
+                    <br/>
+                    <input type="email" id="email" placeholder="loremipsum@gmail.com">
+                    <br/>
+                    <textarea placeholder="Write your messsage here..."></textarea>
+                    <br/>
+                    <button>Get in touch</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
