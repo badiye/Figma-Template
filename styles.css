@@ -8,14 +8,9 @@ html {
 }
 
 body {
-    width: 1440px;
-    height: 5125px;
-    top: -1883px;
-    left: 4630px;
-    max-width: 1700px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px;
-    padding-top: 72px;
     font-family: 'Poppins', sans-serif;
     background-color: #f4f5f7;
     display: flex;
@@ -82,7 +77,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 72px;
     /*fixed navigation bar*/
     position: fixed;
@@ -90,6 +86,11 @@ body {
     z-index: 100;
     background-color: white;
 }
+.navbar .links a.active {
+    color: #6070ff;
+    font-weight: bold;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -269,6 +270,8 @@ body {
 .list-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     width: 1156px;
@@ -282,12 +285,6 @@ body {
     flex: 1;
     overflow: hidden;
     transition: all 0.5s ease;
-}
-#one {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
 }
 .list-container img {
     flex: 1;
@@ -327,7 +324,7 @@ body {
     height: 40px;
     gap: 60px;
 }
-.description ul{
+.description ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -375,9 +372,7 @@ body {
 .tag {
     display: flex;
     height: 24px;
-    border-radius: 8px;
-    padding: 4px 12px 4px 12px;
-    color: #ffffff;
+    padding: 4px 12px;
     border: 1px solid rgb(212, 205, 205);
     border-radius: 8px;
     font-weight: 500;
@@ -404,10 +399,158 @@ body {
     text-align: center;
     vertical-align: middle;
 }
-.more, #extra, .see {
+.actions .see {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.actions .see p {
+    margin: 0;
+}
+.actions .see img {
+    width: 16px;
+    height: auto;
+    display: inline-block;
+}
+.more, .tags .tag:nth-child(4), .tags .tag:nth-child(5), .actions {
     display: none;
 }
-/*Tablets*/
+.list-container.expand {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 24px;
+    padding: 24px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+.list-container.expand .img-box {
+    width: 70%;
+    margin: 0 auto;
+    overflow: visible;
+}
+.list-container.expand .img-box img {
+    width: 100%;
+    max-width: 60%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    transition: all 0.5s ease;
+}
+.list-container.expand .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.list-container.expand .more,
+.list-container.expand .tags li:nth-last-child(-n+2),
+.list-container.expand .actions {
+    display: block;
+}
+.list-container.expand .trigger {
+    display: none;
+}
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #6070ff;
+    cursor: pointer;
+    z-index: 10000;
+    transition: opacity 0.3s ease;
+}
+.list-container.expand .close-btn {
+    display: block;
+    opacity: 1;
+}
+.list-container.expand .topic,
+.list-container.expand .img-box img,
+.list-container.expand .details > p,
+.list-container.expand .more,
+.list-container.expand .tags .tag,
+.list-container.expand .actions {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+}
+.list-container.expand.show .topic {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+.list-container.expand.show .img-box img {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.4s;
+}
+.list-container.expand.show .details > p {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.6s;
+}
+.list-container.expand.show .more {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.8s;
+}
+.list-container.expand.show .tags .tag:nth-child(1) {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 1s;
+}
+.list-container.expand.show .tags .tag:nth-child(2) {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 1.2s;
+}
+.list-container.expand.show .tags .tag:nth-child(3) {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 1.4s;
+}
+.list-container.expand.show .tags .tag:nth-child(4),
+.list-container.expand.show .tags .tag:nth-child(5) {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+.list-container.expand.show .tags .tag:nth-child(4) {
+    transition-delay: 1.6s;
+}
+.list-container.expand.show .tags .tag:nth-child(5) {
+    transition-delay: 1.8s;
+}
+.list-container.expand.show .actions {
+    display: flex;
+    gap: 16px;
+    opacity: 1;
+    transform: scale(1);
+    justify-content: center;
+    margin-top: 20px;
+    transition-delay: 2s;
+}
+
+/*Tablet*/
 @media (max-width: 1024px) {
     .list-container {
         flex-direction: row;
@@ -416,7 +559,8 @@ body {
         height: auto;
         padding: 20px;
     }
-    .img-box, .details {
+    .img-box,
+    .details {
         width: 100%;
         height: auto;
     }
@@ -426,7 +570,8 @@ body {
         border-radius: 8px;
         order: 1;
     }
-    .topic, .description {
+    .topic,
+    .description {
         width: 100%;
         align-items: flex-start;
         gap: 10px;
@@ -436,6 +581,7 @@ body {
         order: 2;
     }
 }
+
 /*Mobile*/
 @media (max-width: 768px) {
     .list-container {
@@ -558,6 +704,13 @@ body {
     vertical-align: middle;
     color: #344563;
 }
+.skillss .content {
+    display: none;
+}
+.skillss .content.show {
+    display: block;
+}
+
 .content {
     width: 414px;
     height: 144px;
